@@ -1,0 +1,18 @@
+use alquilercabanias;
+select nombre from cliente where cuit between 20 and 50;
+select nombre from cliente where localidad='olavarria';
+select nombre from cliente where localidad='junin';
+select nombre from cliente where localidad='tandil';
+select cliente_id from alquiler where precio <30000;
+select cliente_id from alquiler where precio >30000;
+select cliente_id from alquiler where precio <90000;
+select cliente_id from alquiler where precio <=1000000;
+select cliente_id from alquiler where precio >=100000;
+select cliente_id from alquiler where precio between  30000 and 70000;
+select cliente_id from alquiler where precio between  70000 and 100000;
+select nombre from cliente where nombre like a_;
+select * from alquiler order by precio asc;
+select * from alquiler order by precio desc;
+select * from cliente join alquiler on cliente.id=alquiler.cliente_id; 
+select * from cliente left join alquiler on cliente.id=alquiler.cliente_id;
+select * from cliente right join alquiler on cliente.id=alquiler.cliente_id;
